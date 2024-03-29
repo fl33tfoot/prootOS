@@ -1,0 +1,38 @@
+{
+    "preferences": {
+        "name": "itov",
+        "comm": true,
+        "uuid": 0,
+        "default_fps": 10,
+        "allow_destructive_repairs": false,
+        "controller": "wired",
+        "preferred_wireless_controller": "any",
+        "led_brightness": 100
+    },
+    "system": {
+        "os_version": "1.5.0",
+        "os_archetype": "basic",
+        "update_server": "api.southpawstudios.org",
+        "update_port": 3260,
+        "wifi_ssid": "",
+        "wifi_pw": ""
+    },
+    "basic": {
+        "sensitivity": 0.1,
+        "volume": 10000
+    },
+    "advanced": {
+        "sensitivity": 0.1,
+        "volume": 10000,
+        "rgb": false,
+        "audio": false
+    },
+    "devices": {
+        "pairing_failures": 0,
+        "wiimote_a": "",
+        "wiimote_b": "",
+        "joycon_a": "",
+        "joycon_b": "",
+        "speaker_a": ""
+    }
+}
