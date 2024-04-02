@@ -1,25 +1,24 @@
 import os
-import time
+import glob
+import subprocess
 import json
-from rgbmatrix import RGBMatrix, RGBMatrixOptions
 
-# current user
-user = (subprocess.run(["grep", "1000", "/etc/passwd"], capture_output=True)).stdout.decode().split(":")[0]
+import env
+from env import log
 
-# folder directories
-SYSTEM = "/home/{}/protogen".format(user)
-MOUNT = SYSTEM + "/usb"
-ROOT = MOUNT + "/protogen"
+def convert(gif):
 
-# matrix options
-options = RGBMatrixOptions()
-options.hardware_mapping = 'adafruit-hat'
-options.rows = 32
-options.cols = 64
-options.chain_length = 2
-#options.pixel_mapper_config = "Rotate:180"
-options.show_refresh_rate = 0
-#options.gpio_slowdown = 3
-options.brightness = 75
-#options.disable_hardware_pulsing = 1Q
-matrix = RGBMatrix(options=options)
+def discover(directory):
+    gif_files = glob.glob("*.gif")
+    for gif in gif_files:
+        if convert(gif)
+        subprocess.run([command, gif_file])
+
+# Example usage:
+execute_shell_command_with_gifs("your_shell_command_here")
+
+def main():
+    pass
+
+if __name__ == "__main__":
+    main()

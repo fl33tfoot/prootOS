@@ -128,20 +128,18 @@ def main():
 
         # check to make sure the device isnt a goofy ah ah imposter
         if ((len(dev) >= 2) and (dev[1] == "usb")):
-            # a new usb has appeared!
-            if dev[1] == "usb":
-                usb = "/dev/{}1".format(dev[0])
-                log("A new usb has appeared! ({})".format(usb))
-
-                try:
-                    mount(usb)
-                    update()
-                except:
-                    log("Update failed")
-                finally:
-                    # transfer complete, unmount
-                    unmount(usb)
-                    return True
+        # a new usb has appeared!
+            usb = "/dev/{}1".format(dev[0])
+            log("A new usb has appeared! ({})".format(usb))
+            try:
+                mount(usb)
+                update()
+            except:
+                log("Update failed")
+            finally:
+                # transfer complete, unmount
+                unmount(usb)
+                return True
     log("No USB detected, checking internet connection...")
 
     if check_internet():

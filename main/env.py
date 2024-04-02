@@ -21,11 +21,13 @@ SYSTEM_ANIM = SYSTEM + "/anim"
 SYSTEM_MAIN = SYSTEM + "/main"
 SYSTEM_LOGFILE = SYSTEM + "/main/output.log"
 SYSTEM_CONFIGFILE = SYSTEM + "/main/config.json"
+SYSTEM_HASHFILE = SYSTEM + "/anim/hashes.json"
 MOUNT = SYSTEM + "/usb"
 
 # usb mount hierarchy
 ROOT = MOUNT + "/protogen"
 ROOT_ANIM = MOUNT + "/protogen/anim"
+ROOT_MAIN = MOUNT + "/protogen/main"
 ROOT_BACKUP = MOUNT + "/protogen/backup"
 
 ## log function
@@ -36,7 +38,17 @@ def log(msg, err_id=0):
         with open (SYSTEM_LOGFILE, "w") as logfile:
             logfile.write("Hello World! You're probably wondering how I got here :3\n")
     with open (SYSTEM_LOGFILE, "a") as logfile:
-        entry = ("[{}] {}{}: {}".format(now().strftime("%Y/%m/%d @ %H:%M:%S"), ("(Error {}) ".format(err_id) if (err_id > 0) else ""),(inspect.stack()[1].filename).split("/")[-1],msg))
+        entry = ("[{}] {}{}: {}".format(
+            # timestamp but user friendly
+            now().strftime("%Y/%m/%d @ %H:%M:%S"),
+            # either error id or ok
+            ("(ERR {}) ".format(err_id) if (err_id > 0) else "(  OK  ) "),
+            # function caller script name
+            (inspect.stack()[1].filename).split("/")[-1],
+            # log message
+            msg
+        ))
+        # print entry to both logfile and stdout
         print(entry, file=logfile)
         print(entry)
 
