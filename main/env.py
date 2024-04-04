@@ -24,6 +24,13 @@ SYSTEM_CONFIGFILE = SYSTEM + "/main/config.json"
 SYSTEM_HASHFILE = SYSTEM + "/anim/hashes.json"
 MOUNT = SYSTEM + "/usb"
 
+# streamfile extension for compiled animations
+STREAMFILE_EXTENSION = ".proot"
+LIV_PATH = SYSTEM + "/main/led-image-viewer"
+TS_PATH = SYSTEM + "/main/text-scroller"
+RUNTIME_ANIMS_DIR = SYSTEM + "/main/sys_anim"
+RUNTIME_ANIMS = ["uploading", "downloading", "converting", "update", "error", "update_wifi", "usb", "ok"]
+
 # usb mount hierarchy
 ROOT = MOUNT + "/protogen"
 ROOT_ANIM = MOUNT + "/protogen/anim"
@@ -44,7 +51,7 @@ def log(msg, err_id=0):
             # either error id or ok
             ("(ERR {}) ".format(err_id) if (err_id > 0) else "(  OK  ) "),
             # function caller script name
-            (inspect.stack()[1].filename).split("/")[-1],
+            inspect.stack()[1].filename.split("/")[-1],
             # log message
             msg
         ))
@@ -66,8 +73,11 @@ if os.path.exists(SYSTEM_CONFIGFILE):
 
     ## json variables
     try:
+        if config is None:
+            raise Exception("Empty configuration variable (not loaded properly?)")
+
         # hardware archetype, either basic or advanced configuration
-        archetype = config["system"]["os_archetype"]
+        archetype = config["system"]["os_archetype"].lower()
         # protogen name
         protogen = config["preferences"]["name"].upper()
         # controller sensitivity (update rate in seconds)
@@ -82,6 +92,17 @@ if os.path.exists(SYSTEM_CONFIGFILE):
         # wireless - joycon, wiimote
         controller = config["preferences"]["controller"]
         pwc = config["preferences"]["preferred_wireless_controller"]
+
+        # setup matrix preferences
+        MATRIX_COLS = 128
+        MATRIX_ROWS = 32
+        MATRIX_GPIO_SLOWDOWN = 2
+        MATRIX_BRIGHTNESS = 10 if config["preferences"]["led_brightness"] < 10 else config["preferences"]["led_brightness"]
+        MATRIX_TYPE = "adafruit-hat-pwm"
+        MATRIX_FPS = config["preferences"]["default_fps"]
+        MATRIX_DAISY_CHAIN = 2
+        MATRIX_REFRESH_RATE_LIMIT = 0
+
         log("JSON variables initialized successfully")
 
     except (Exception, AttributeError, KeyError) as e:
@@ -91,7 +112,7 @@ if os.path.exists(SYSTEM_CONFIGFILE):
 # default animation fps when not manually specified
 def get_anim_default_fps():
     # animation speed in ms, 17ms = about 60 fps, 100ms = 10 fps, default 10
-    return config["preferences"]["default_fps"]
+    return MATRIX_BRIGHTNESS
 
 if __name__ == "__main__":
     print("This is a supplementary environment variable script. Congrats, nothing happened :3")

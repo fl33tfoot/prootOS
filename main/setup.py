@@ -7,7 +7,7 @@ from env import log
 
 default_config = {
     "preferences": {
-        "name":"unknown protogen",
+        "name": "unknown protogen",
         "comm": False,
         "uuid": 0,
         "default_fps": 10,
@@ -44,6 +44,7 @@ default_config = {
     }
 }
 
+
 def update_config_features():
     global default_config
     new_options = 0
@@ -52,7 +53,8 @@ def update_config_features():
         with open(env.SYSTEM_CONFIGFILE, 'r') as cfg:
             current_config = json.load(cfg)
     except Exception as e:
-        log("Unable to load config file correctly. Check your configuration for extra commas. also pls no edit the config if you dunno what ur doing :3", err_id=102)
+        log("Unable to load config file correctly. Check your configuration for extra commas. also pls no edit the config if you dunno what ur doing :3",
+            err_id=102)
         exit()
 
     try:
@@ -83,6 +85,7 @@ def update_config_features():
         return False
     return True
 
+
 def overwrite_config(sections=["system", "basic", "advanced"]):
     global default_config
 
@@ -107,6 +110,7 @@ def overwrite_config(sections=["system", "basic", "advanced"]):
 
     return True
 
+
 def make_default_config():
     global default_config
 
@@ -126,6 +130,7 @@ def make_default_config():
         log("Error creating config file: {}".format(e), err_id=11)
         return False
     return True
+
 
 def update_version():
     global default_config
@@ -161,6 +166,7 @@ def update_version():
                 return False
     return True
 
+
 def reset_bt_devices():
     log("Resetting wireless device MAC config...")
     if overwrite_config(["devices"]):
@@ -169,6 +175,7 @@ def reset_bt_devices():
         log("Error resetting MAC addresses, refer to previous exception", err_id=11)
         return False
     return True
+
 
 def repair_config():
     log("Attemping a soft repair of the config...")
@@ -186,22 +193,23 @@ def repair_config():
         log("Soft repair unsuccessful. Destructive repair is not authorized, exiting...")
         exit()
 
+
 def main():
     if os.path.exists(env.SYSTEM_CONFIGFILE):
         update_config_features()
         update_version()
-        return True
     else:
         make_default_config()
-        return True
-    return False
+    return True
+
 
 if __name__ == "__main__":
-#    overwrite_config(["preferences"])
-#    update_config_features()
+    #    overwrite_config(["preferences"])
+    #    update_config_features()
 
     if os.path.exists(env.SYSTEM_CONFIGFILE):
-        confirm = input("WARNING! Do you want to overwrite your current configuration with default values? (y/N): ").lower()
+        confirm = input(
+            "WARNING! Do you want to overwrite your current configuration with default values? (y/N): ").lower()
         if ("y" or "yes" or "confirm") in confirm:
             log("Received manual user confirmation for overwriting config.json")
             overwrite_config()
