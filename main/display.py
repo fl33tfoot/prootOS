@@ -7,10 +7,21 @@ from env import log
 override = False
 displaying = False
 
-
 # play animations from streamfile
 def show(streamfile_path, loops=0, time=0):
     global displaying, override
+
+    lib_show = subprocess.run([env.LIV_PATH,
+                               "--led-no-drop-privs",
+                               "--led-brightness={}".format(env.MATRIX_BRIGHTNESS),
+                               "--led-slowdown-gpio={}".format(env.MATRIX_GPIO_SLOWDOWN),
+                               "--led-cols={}".format(env.MATRIX_COLS),
+                               "--led-rows={}".format(env.MATRIX_ROWS),
+                               "--led-gpio-mapping={}".format(env.MATRIX_TYPE),
+                               "--led-chain={}".format(env.MATRIX_DAISY_CHAIN),
+                               "--led-limit-refresh={}".format(env.MATRIX_REFRESH_RATE_LIMIT),
+                               "-D{}".format(1000 // env.MATRIX_FPS),
+                               "{}".format(base_gif + ".gif")], capture_output=True)
 
     if not override:
         if displaying:
@@ -48,7 +59,7 @@ def kill():
     return True
 
 # display important system animations
-def show_system(anim_id, loops=0, time=0):
+def show_system(anim_id, async, loops=0, time=0):
     global displaying, override
 
     override = True

@@ -7,9 +7,8 @@ import setup
 setup.main()
 
 # project imports
-import update
+import pupdate
 import upload
-#import convert
 import nunchuk
 import env
 from env import log

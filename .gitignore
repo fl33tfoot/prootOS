@@ -1,0 +1,6 @@
+# don't upload any compiled animations cus these mf's are large lol
+*.proot
+
+# other misc
+*/__pycache__/
+main/output.log
