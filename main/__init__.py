@@ -1,5 +1,6 @@
 # library imports
 import time
+import asyncio
 from importlib import reload
 
 # fix bjorked config
@@ -8,22 +9,29 @@ setup.main()
 
 # project imports
 import pupdate
+import animconvert
+import display
 import upload
 import nunchuk
 import env
 from env import log
 
-if __name__ == "__main__":
-
+def main():
     log("{} is waking up... good morning!".format(env.protogen))
 
     log("Update check!")
-    update.main()
+    pupdate.main()
 
     log("Starting USB hotplug listener!")
     log(".... when i want it working")
 
-    log("System hardware check: {} archetype, {} controller".format(env.archetype, ((env.controller + " " + env.pwc) if (env.controller == "wireless") else env.controller)))
+    log("---")
+    log("ARCHETYPE: {}".format(env.archetype))
+    log("CONTROLLER: {}".format((env.controller + " " + env.pwc) if (env.controller == "wireless") else env.controller))
+
+    log("---")
+
+
     if env.archetype == "basic":
         nunchuk.main()
         pass
@@ -31,4 +39,11 @@ if __name__ == "__main__":
         pass
     else:
         log("I dont know what archetype I have! Goodbye!", err_id=11)
+        exit()
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        display.kill()
         exit()

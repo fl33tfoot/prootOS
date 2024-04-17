@@ -116,7 +116,7 @@ def make_default_config():
 
     try:
         log("Generating first time config...")
-        # input information here at a future date for customization
+        # get user input information here at a future date for customization
         # for now its manual input :P
 
         log("Writing config file...")
@@ -208,8 +208,7 @@ if __name__ == "__main__":
     #    update_config_features()
 
     if os.path.exists(env.SYSTEM_CONFIGFILE):
-        confirm = input(
-            "WARNING! Do you want to overwrite your current configuration with default values? (y/N): ").lower()
+        confirm = input("WARNING! Do you want to overwrite your current configuration with default values? (y/N): ").lower()
         if ("y" or "yes" or "confirm") in confirm:
             log("Received manual user confirmation for overwriting config.json")
             overwrite_config()

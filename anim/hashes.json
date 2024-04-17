@@ -153,6 +153,20 @@
             "streamfile": "/home/itov/protogen/anim/page3/4.proot",
             "fps": 100,
             "converted": true
+        },
+        "bot": {
+            "filepath": "/home/itov/protogen/anim/page3/5.gif",
+            "filehash": "25a4e617455351f625e150803695ef02",
+            "streamfile": "/home/itov/protogen/anim/page3/5.proot",
+            "fps": 100,
+            "converted": true
+        },
+        "bot_left": {
+            "filepath": "/home/itov/protogen/anim/page3/6.gif",
+            "filehash": "25a4e617455351f625e150803695ef02",
+            "streamfile": "/home/itov/protogen/anim/page3/6.proot",
+            "fps": 100,
+            "converted": true
         }
     }
 }

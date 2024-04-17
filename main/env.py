@@ -30,6 +30,7 @@ LIV_PATH = SYSTEM + "/main/led-image-viewer"
 TS_PATH = SYSTEM + "/main/text-scroller"
 RUNTIME_ANIMS_DIR = SYSTEM + "/main/sys_anim"
 RUNTIME_ANIMS = ["uploading", "downloading", "converting", "update", "error", "update_wifi", "usb", "ok"]
+BASIC_ANIMS_PAGE = ["default", "top", "top_right", "right", "bot_right", "bot", "bot_left", "left", "top_left"]
 
 # usb mount hierarchy
 ROOT = MOUNT + "/protogen"
@@ -94,7 +95,7 @@ if os.path.exists(SYSTEM_CONFIGFILE):
         pwc = config["preferences"]["preferred_wireless_controller"]
 
         # setup matrix preferences
-        MATRIX_COLS = 128
+        MATRIX_COLS = 64
         MATRIX_ROWS = 32
         MATRIX_GPIO_SLOWDOWN = 2
         MATRIX_BRIGHTNESS = 10 if config["preferences"]["led_brightness"] < 10 else config["preferences"]["led_brightness"]

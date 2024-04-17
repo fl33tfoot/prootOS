@@ -9,7 +9,8 @@ import env
 from env import log
 
 # the joystick directions/animations to have per "page" on basic configurations
-basic_page = ["default", "top", "top_right", "right", "bot_right", "bot", "bot_left", "left", "top_left"]
+#basic_page = ["default", "top", "top_right", "right", "bot_right", "bot", "bot_left", "left", "top_left"]
+basic_page = env.BASIC_ANIMS_PAGE
 
 # the file schema and data to store per animation
 file_schema = {
