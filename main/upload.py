@@ -4,6 +4,8 @@ import os
 import hashlib
 import json
 import shutil
+import zipfile
+import pdb 
 
 import env
 from env import log
@@ -18,7 +20,11 @@ file_schema = {
     "filehash": "",
     "streamfile": "",
     "fps": env.get_anim_default_fps(),
-    "converted": False
+    "converted": False,
+    "bindings": {
+        "audio": "",
+        "scripts": ""
+    }
 }
 
 # buffer hashfile variable
@@ -26,7 +32,6 @@ current_hashfile = {}
 
 # list of validated .gif files to make my life easier
 valid_gifs = []
-
 
 # unmount device function
 def unmount(device):
@@ -150,6 +155,7 @@ def check_file_validity(path=env.ROOT_ANIM):
         log("No valid .gif files found in {}!".format(path), err_id=105)
         return False
 
+    valid_gifs.sort()
     log("{} valid gifs found in {}".format(len(valid_gifs), path))
     return True
 
@@ -207,7 +213,11 @@ def update_hashes():
             'filehash': new_hash,
             'streamfile': '',
             'fps': env.get_anim_default_fps(),
-            'converted': False
+            'converted': False,
+            'bindings': {
+                'audio': '',
+                'scripts': ''
+            }
         }
 
         if os.path.exists(env.SYSTEM_HASHFILE):
@@ -294,6 +304,7 @@ def update_hashes():
 # backup animations
 def backup():
     log("Backup started! YIPPPEEEEEEEEEE")
+
     try:
         shutil.make_archive(os.path.join(env.ROOT_BACKUP, "anim_{}".format(env.timestamp())), "zip", env.SYSTEM_ANIM)
         log("Backup successful")
@@ -312,6 +323,7 @@ def backup():
 
 def main():
     while True:
+
         # check block devices for new usb connections
         lsblk_output = subprocess.check_output(["lsblk", "-o", "NAME,TRAN"], universal_newlines=True)
         lines = lsblk_output.strip().split("\n")
@@ -380,4 +392,5 @@ def main():
 
 
 if __name__ == "__main__":
+#    pdb.set_trace()
     main()

@@ -19,6 +19,8 @@ user = (subprocess.run(["grep", "1000", "/etc/passwd"], capture_output=True)).st
 SYSTEM = "/home/{}/protogen".format(user)
 SYSTEM_ANIM = SYSTEM + "/anim"
 SYSTEM_MAIN = SYSTEM + "/main"
+SYSTEM_SCRIPTS = SYSTEM + "/scripts"
+SYSTEM_AUDIO = SYSTEM + "/audio"
 SYSTEM_LOGFILE = SYSTEM + "/main/output.log"
 SYSTEM_CONFIGFILE = SYSTEM + "/main/config.json"
 SYSTEM_HASHFILE = SYSTEM + "/anim/hashes.json"
@@ -26,8 +28,8 @@ MOUNT = SYSTEM + "/usb"
 
 # streamfile extension for compiled animations
 STREAMFILE_EXTENSION = ".proot"
-LIV_PATH = SYSTEM + "/main/led-image-viewer"
-TS_PATH = SYSTEM + "/main/text-scroller"
+LIV_PATH = SYSTEM + "/main/libs/led-image-viewer"
+TS_PATH = SYSTEM + "/main/libs/text-scroller"
 RUNTIME_ANIMS_DIR = SYSTEM + "/main/sys_anim"
 RUNTIME_ANIMS = ["uploading", "downloading", "converting", "update", "error", "update_wifi", "usb", "ok"]
 BASIC_ANIMS_PAGE = ["default", "top", "top_right", "right", "bot_right", "bot", "bot_left", "left", "top_left"]
@@ -36,6 +38,8 @@ BASIC_ANIMS_PAGE = ["default", "top", "top_right", "right", "bot_right", "bot", 
 ROOT = MOUNT + "/protogen"
 ROOT_ANIM = MOUNT + "/protogen/anim"
 ROOT_MAIN = MOUNT + "/protogen/main"
+ROOT_SCRIPTS = MOUNT + "/protogen/scripts"
+ROOT_AUDIO = MOUNT + "/protogen/audio"
 ROOT_BACKUP = MOUNT + "/protogen/backup"
 
 ## log function
@@ -58,7 +62,8 @@ def log(msg, err_id=0):
         ))
         # print entry to both logfile and stdout
         print(entry, file=logfile)
-        print(entry)
+        if config["system"]["debug_on"]:
+            print(entry)
 
 # refresh config function just in case i need a critical config option
 def refresh_config():
@@ -79,8 +84,10 @@ if os.path.exists(SYSTEM_CONFIGFILE):
 
         # hardware archetype, either basic or advanced configuration
         archetype = config["system"]["os_archetype"].lower()
+        debug = config["system"]["debug_on"]
         # protogen name
         protogen = config["preferences"]["name"].upper()
+        theme_color = config["preferences"]["color"]
         # controller sensitivity (update rate in seconds)
         sensitivity = config[archetype]["sensitivity"]
         # proot-os version
@@ -104,6 +111,14 @@ if os.path.exists(SYSTEM_CONFIGFILE):
         MATRIX_DAISY_CHAIN = 2
         MATRIX_REFRESH_RATE_LIMIT = 0
 
+        # advanced variables
+        rgb = config["advanced"]["rgb"]
+        loop = config["advanced"]["loop"]
+        audio = config["advanced"]["audio"]
+        scripts = config["advanced"]["scripts"]
+        vol = config[archetype]["volume"]
+        startup_anim = config["advanced"]["startup_anim"]
+
         log("JSON variables initialized successfully")
 
     except (Exception, AttributeError, KeyError) as e:
@@ -113,7 +128,26 @@ if os.path.exists(SYSTEM_CONFIGFILE):
 # default animation fps when not manually specified
 def get_anim_default_fps():
     # animation speed in ms, 17ms = about 60 fps, 100ms = 10 fps, default 10
-    return MATRIX_BRIGHTNESS
+    return MATRIX_FPS
+
+# sets and gets the current value of the specified variable to the config file
+def get_config_option(option):
+    option = option.split('.')
+
+    return config[option[0]][option[1]]
+
+def set_config_option(option, value):
+    global config
+
+    try:
+        option = option.split('.')
+        config[option[0]][option[1]] = value
+
+        with open(SYSTEM_CONFIGFILE, 'w') as cfg:
+            json.dump(config, cfg, indent=4)
+        log("Successfully updated config option '{}'".format(option))
+    except Exception as e:
+        log("Error writing config option '{}' to config: {}".format(option, e), err_id=13)
 
 if __name__ == "__main__":
     print("This is a supplementary environment variable script. Congrats, nothing happened :3")

@@ -12,7 +12,7 @@ import pupdate
 import animconvert
 import display
 import upload
-import nunchuk
+import controllers
 import env
 from env import log
 
@@ -33,7 +33,7 @@ def main():
 
 
     if env.archetype == "basic":
-        nunchuk.main()
+#        nunchuk.main()
         pass
     elif env.archetype == "advanced":
         pass

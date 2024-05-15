@@ -1,172 +1,766 @@
 {
     "0": {
-        "hashfile_archetype": "basic",
+        "hashfile_archetype": "advanced",
         "boot_anim": {
-            "filepath": "/home/itov/protogen/anim/page0/boot.gif",
+            "filepath": "/home/itov/protogen/anim/page1/boot.gif",
             "filehash": "92383a8032cc1e35148e89b88329476e",
-            "streamfile": "/home/itov/protogen/anim/page0/boot.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/boot.proot",
+            "fps": 16,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         }
     },
     "1": {
-        "default": {
-            "filepath": "/home/itov/protogen/anim/page1/0.gif",
+        "ahegao": {
+            "filepath": "/home/itov/protogen/anim/page1/ahegao.gif",
             "filehash": "9550f98e24b94e260b8913d181b508bf",
-            "streamfile": "/home/itov/protogen/anim/page1/0.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/ahegao.proot",
+            "fps": 2000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top": {
-            "filepath": "/home/itov/protogen/anim/page1/1.gif",
+        "angery": {
+            "filepath": "/home/itov/protogen/anim/page1/angery.gif",
             "filehash": "8f6e6cebc54da1e16d4927e30b4cb420",
-            "streamfile": "/home/itov/protogen/anim/page1/1.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/angery.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top_right": {
-            "filepath": "/home/itov/protogen/anim/page1/2.gif",
-            "filehash": "75c8e073100dc752f26fd894b47d0423",
-            "streamfile": "/home/itov/protogen/anim/page1/2.proot",
-            "fps": 100,
-            "converted": true
+        "attention": {
+            "filepath": "/home/itov/protogen/anim/page1/attention.gif",
+            "filehash": "f4b1b1cf35760658548324801c491b42",
+            "streamfile": "/home/itov/protogen/anim/page1/attention.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "right": {
-            "filepath": "/home/itov/protogen/anim/page1/3.gif",
+        "bk": {
+            "filepath": "/home/itov/protogen/anim/page1/bk.gif",
             "filehash": "91bd4ab9c45cf34a37ddbfaa1dbd66d0",
-            "streamfile": "/home/itov/protogen/anim/page1/3.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/bk.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot_right": {
-            "filepath": "/home/itov/protogen/anim/page1/4.gif",
+        "blink1": {
+            "filepath": "/home/itov/protogen/anim/page1/blink1.gif",
             "filehash": "7faab11bbdb6a333a6d61d78591da480",
-            "streamfile": "/home/itov/protogen/anim/page1/4.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/blink1.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot": {
-            "filepath": "/home/itov/protogen/anim/page1/5.gif",
+        "blink2": {
+            "filepath": "/home/itov/protogen/anim/page1/blink2.gif",
             "filehash": "db87939012da5d37cbf77a2281cbbf98",
-            "streamfile": "/home/itov/protogen/anim/page1/5.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/blink2.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot_left": {
-            "filepath": "/home/itov/protogen/anim/page1/6.gif",
+        "blink3": {
+            "filepath": "/home/itov/protogen/anim/page1/blink3.gif",
             "filehash": "a472e52883e4ceb6c97f4aae9fc8baf7",
-            "streamfile": "/home/itov/protogen/anim/page1/6.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/blink3.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "left": {
-            "filepath": "/home/itov/protogen/anim/page1/7.gif",
+        "bootdown": {
+            "filepath": "/home/itov/protogen/anim/page1/bootdown.gif",
             "filehash": "7b47c1a7ff7e9b6233b709068f0e3c68",
-            "streamfile": "/home/itov/protogen/anim/page1/7.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/bootdown.proot",
+            "fps": 40,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top_left": {
-            "filepath": "/home/itov/protogen/anim/page1/8.gif",
+        "boykisser": {
+            "filepath": "/home/itov/protogen/anim/page1/boykisser.gif",
             "filehash": "4fc856900c2f6e60bb17b7f1d08d97d8",
-            "streamfile": "/home/itov/protogen/anim/page1/8.proot",
-            "fps": 100,
-            "converted": true
-        }
-    },
-    "2": {
-        "default": {
-            "filepath": "/home/itov/protogen/anim/page2/0.gif",
-            "filehash": "9ac07003e8b8bddcb8b11294b55efdb3",
-            "streamfile": "/home/itov/protogen/anim/page2/0.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/boykisser.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top": {
-            "filepath": "/home/itov/protogen/anim/page2/1.gif",
-            "filehash": "b4ab4dc3302826645275a6522ef3b589",
-            "streamfile": "/home/itov/protogen/anim/page2/1.proot",
-            "fps": 100,
-            "converted": true
+        "charging": {
+            "filepath": "/home/itov/protogen/anim/page1/charging.gif",
+            "filehash": "4aedb22f56c2648ca2ede97e7e073a75",
+            "streamfile": "/home/itov/protogen/anim/page1/charging.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top_right": {
-            "filepath": "/home/itov/protogen/anim/page2/2.gif",
-            "filehash": "8cae85638aacabfa289ef5aa8b645bf2",
-            "streamfile": "/home/itov/protogen/anim/page2/2.proot",
-            "fps": 100,
-            "converted": true
+        "coffee": {
+            "filepath": "/home/itov/protogen/anim/page1/coffee.gif",
+            "filehash": "ac29762cfc5298fed2573b68d21d3ae7",
+            "streamfile": "/home/itov/protogen/anim/page1/coffee.proot",
+            "fps": 90,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot": {
-            "filepath": "/home/itov/protogen/anim/page2/5.gif",
+        "cry": {
+            "filepath": "/home/itov/protogen/anim/page1/cry.gif",
+            "filehash": "82506b48cde1646b2d0503d7f5e87eeb",
+            "streamfile": "/home/itov/protogen/anim/page1/cry.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "dizzy": {
+            "filepath": "/home/itov/protogen/anim/page1/dizzy.gif",
+            "filehash": "2f91c56d199b904eea099d68892896c6",
+            "streamfile": "/home/itov/protogen/anim/page1/dizzy.proot",
+            "fps": 90,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "error": {
+            "filepath": "/home/itov/protogen/anim/page1/error.gif",
+            "filehash": "5a1e0b77f5afaf2ceb90f08f7ec8a59f",
+            "streamfile": "/home/itov/protogen/anim/page1/error.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "glasses": {
+            "filepath": "/home/itov/protogen/anim/page1/glasses.gif",
             "filehash": "e6d292e908370db863af9ed24469580c",
-            "streamfile": "/home/itov/protogen/anim/page2/5.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/glasses.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot_left": {
-            "filepath": "/home/itov/protogen/anim/page2/6.gif",
+        "glitch": {
+            "filepath": "/home/itov/protogen/anim/page1/glitch.gif",
             "filehash": "c1e1e9c6c3dbaae44a1a9f0e510ea702",
-            "streamfile": "/home/itov/protogen/anim/page2/6.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/glitch.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "left": {
-            "filepath": "/home/itov/protogen/anim/page2/7.gif",
-            "filehash": "6275c871639340e1da0b06b20cf0fb93",
-            "streamfile": "/home/itov/protogen/anim/page2/7.proot",
-            "fps": 100,
-            "converted": true
+        "heart": {
+            "filepath": "/home/itov/protogen/anim/page1/heart.gif",
+            "filehash": "ca0b70b288b52311a506822169f38c8b",
+            "streamfile": "/home/itov/protogen/anim/page1/heart.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top_left": {
-            "filepath": "/home/itov/protogen/anim/page2/8.gif",
-            "filehash": "4b39c8466114f30b0fa9b1a419857876",
-            "streamfile": "/home/itov/protogen/anim/page2/8.proot",
-            "fps": 100,
-            "converted": true
-        }
-    },
-    "3": {
-        "top": {
-            "filepath": "/home/itov/protogen/anim/page3/1.gif",
+        "laugh": {
+            "filepath": "/home/itov/protogen/anim/page1/laugh.gif",
+            "filehash": "f295d3fdffaedf7921bf4a7c2a10590f",
+            "streamfile": "/home/itov/protogen/anim/page1/laugh.proot",
+            "fps": 85,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "load": {
+            "filepath": "/home/itov/protogen/anim/page1/load.gif",
             "filehash": "2245fec0f700b50953934fe5c1f7f604",
-            "streamfile": "/home/itov/protogen/anim/page3/1.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/load.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "top_right": {
-            "filepath": "/home/itov/protogen/anim/page3/2.gif",
-            "filehash": "713ac7f27d95ce6188a98128a478c3b9",
-            "streamfile": "/home/itov/protogen/anim/page3/2.proot",
-            "fps": 100,
-            "converted": true
+        "lowbattery": {
+            "filepath": "/home/itov/protogen/anim/page1/lowbattery.gif",
+            "filehash": "e04631f9b71711a5871311b8b8fbf861",
+            "streamfile": "/home/itov/protogen/anim/page1/lowbattery.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "right": {
-            "filepath": "/home/itov/protogen/anim/page3/3.gif",
+        "lua": {
+            "filepath": "/home/itov/protogen/anim/page1/lua.gif",
             "filehash": "742eed369b79381a6a9a50ea6f0142b2",
-            "streamfile": "/home/itov/protogen/anim/page3/3.proot",
-            "fps": 100,
-            "converted": true
+            "streamfile": "/home/itov/protogen/anim/page1/lua.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot_right": {
-            "filepath": "/home/itov/protogen/anim/page3/4.gif",
-            "filehash": "c33426be3e09ecf41888f686684bfb41",
-            "streamfile": "/home/itov/protogen/anim/page3/4.proot",
-            "fps": 100,
-            "converted": true
+        "music": {
+            "filepath": "/home/itov/protogen/anim/page1/music.gif",
+            "filehash": "962589bcabe56bd0759142dfd606f7e8",
+            "streamfile": "/home/itov/protogen/anim/page1/music.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot": {
-            "filepath": "/home/itov/protogen/anim/page3/5.gif",
-            "filehash": "25a4e617455351f625e150803695ef02",
-            "streamfile": "/home/itov/protogen/anim/page3/5.proot",
-            "fps": 100,
-            "converted": true
+        "no": {
+            "filepath": "/home/itov/protogen/anim/page1/no.gif",
+            "filehash": "c348d229f90cfb1e35fa3fa8be072077",
+            "streamfile": "/home/itov/protogen/anim/page1/no.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         },
-        "bot_left": {
-            "filepath": "/home/itov/protogen/anim/page3/6.gif",
-            "filehash": "25a4e617455351f625e150803695ef02",
-            "streamfile": "/home/itov/protogen/anim/page3/6.proot",
-            "fps": 100,
-            "converted": true
+        "oeyes": {
+            "filepath": "/home/itov/protogen/anim/page1/oeyes.gif",
+            "filehash": "58c9fd15e21ca32c558d3b4af5bfb85b",
+            "streamfile": "/home/itov/protogen/anim/page1/oeyes.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "oface": {
+            "filepath": "/home/itov/protogen/anim/page1/oface.gif",
+            "filehash": "1c06e976f675e0c000ca6850ed7d6f52",
+            "streamfile": "/home/itov/protogen/anim/page1/oface.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "owo1": {
+            "filepath": "/home/itov/protogen/anim/page1/owo1.gif",
+            "filehash": "69e246a24fa3cf9d9318d45be3cc3115",
+            "streamfile": "/home/itov/protogen/anim/page1/owo1.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "owo2": {
+            "filepath": "/home/itov/protogen/anim/page1/owo2.gif",
+            "filehash": "64d3b78690f986d964ed4199f0c598e9",
+            "streamfile": "/home/itov/protogen/anim/page1/owo2.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "pacman": {
+            "filepath": "/home/itov/protogen/anim/page1/pacman.gif",
+            "filehash": "926820ea1ed308b2fdb29d4345d8bce0",
+            "streamfile": "/home/itov/protogen/anim/page1/pacman.proot",
+            "fps": 25,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "party": {
+            "filepath": "/home/itov/protogen/anim/page1/party.gif",
+            "filehash": "14e39e70938a9db4d3fe2778a308f15c",
+            "streamfile": "/home/itov/protogen/anim/page1/party.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "qr": {
+            "filepath": "/home/itov/protogen/anim/page1/qr.gif",
+            "filehash": "8d91dcec8866cde6eb0634a17352bc9f",
+            "streamfile": "/home/itov/protogen/anim/page1/qr.proot",
+            "fps": 2000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "ratio": {
+            "filepath": "/home/itov/protogen/anim/page1/ratio.gif",
+            "filehash": "c54a77375808478d599f62d4f979c33e",
+            "streamfile": "/home/itov/protogen/anim/page1/ratio.proot",
+            "fps": 35,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_attention": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_attention.gif",
+            "filehash": "137afb1ef0d97a65fc6d3ec1c0e8ed21",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_attention.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_blink1": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_blink1.gif",
+            "filehash": "acfe8f9d57a71100300bcdf6904fb0c7",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_blink1.proot",
+            "fps": 15,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_blink2": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_blink2.gif",
+            "filehash": "4a1fbbda7d62c5bb5ba4282e51d200fb",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_blink2.proot",
+            "fps": 10,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_blink3": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_blink3.gif",
+            "filehash": "0cfe8c92fe4cf9e0595955c9d35c6aea",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_blink3.proot",
+            "fps": 15,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_charging": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_charging.gif",
+            "filehash": "4bed83ae8a7dff6430a1287bb4bd2c50",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_charging.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_coffee": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_coffee.gif",
+            "filehash": "1bf9b1da8e8b062d8208705ba4692117",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_coffee.proot",
+            "fps": 90,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_cry": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_cry.gif",
+            "filehash": "0dd0224c95452b0b51cc146923ec8004",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_cry.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_dizzy": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_dizzy.gif",
+            "filehash": "b301aad18e7ff2a0491dc71da097c35f",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_dizzy.proot",
+            "fps": 90,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_error": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_error.gif",
+            "filehash": "546d8e522e0cb403fa8132d5e7a0524c",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_error.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_heart": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_heart.gif",
+            "filehash": "a00bae9cc1264effb2b64d7adf90be8c",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_heart.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_laugh": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_laugh.gif",
+            "filehash": "6e095c5b0064af4eeeb23806523bdbd8",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_laugh.proot",
+            "fps": 85,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_load": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_load.gif",
+            "filehash": "222f167d0742a4ca8208977033c57340",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_load.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_lowbattery": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_lowbattery.gif",
+            "filehash": "fd533f3b60a17d8deecd0c103e8551c1",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_lowbattery.proot",
+            "fps": 80,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_music": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_music.gif",
+            "filehash": "ee84347dedf20e1cfd74e1a3f8db4aeb",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_music.proot",
+            "fps": 70,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_no": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_no.gif",
+            "filehash": "43929bcb38dde61a033a8333c3d8ab73",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_no.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_oeyes": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_oeyes.gif",
+            "filehash": "6659cc05291f2580c16c9b43e4d95ef9",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_oeyes.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_owo1": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_owo1.gif",
+            "filehash": "0386d090986480766cd88ae7bfc4b98d",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_owo1.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_owo2": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_owo2.gif",
+            "filehash": "1c59cc572f2577ea5c1830588dab807f",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_owo2.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_party": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_party.gif",
+            "filehash": "47e1db80b11b9e5fdea7cea43cee800f",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_party.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_qr": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_qr.gif",
+            "filehash": "1200fe4d6af80f18182ab6750ae2c71f",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_qr.proot",
+            "fps": 120,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_ratio": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_ratio.gif",
+            "filehash": "521d6701e6fde82a4d2a21149eb2d179",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_ratio.proot",
+            "fps": 30,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_sadblink": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_sadblink.gif",
+            "filehash": "b9a3e0225dc41c16c1905954f8b5df14",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_sadblink.proot",
+            "fps": 10,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_sleep": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_sleep.gif",
+            "filehash": "4ee30637aa388d26b30c7f688b9a2b88",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_sleep.proot",
+            "fps": 120,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_sorry": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_sorry.gif",
+            "filehash": "59f3cb84bace619d83c68febf31badfd",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_sorry.proot",
+            "fps": 65,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_uwu1": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_uwu1.gif",
+            "filehash": "c3e3aae47c70b527a8ab64b63b7723f0",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_uwu1.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_uwu2": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_uwu2.gif",
+            "filehash": "fe267c4ba191308650f0333b2a208d16",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_uwu2.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_xeyes": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_xeyes.gif",
+            "filehash": "7a19c2ea9fa363636a2d7dda59ca8bef",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_xeyes.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "rgb_yes": {
+            "filepath": "/home/itov/protogen/anim/page1/rgb_yes.gif",
+            "filehash": "c9600f39037a9f2310f74061d34d1d66",
+            "streamfile": "/home/itov/protogen/anim/page1/rgb_yes.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "sheesh": {
+            "filepath": "/home/itov/protogen/anim/page1/sheesh.gif",
+            "filehash": "df9e6555a0ac08439e214f2b3ece06c6",
+            "streamfile": "/home/itov/protogen/anim/page1/sheesh.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "sleep": {
+            "filepath": "/home/itov/protogen/anim/page1/sleep.gif",
+            "filehash": "daef249bacea39f3f67adc1e62d13d9d",
+            "streamfile": "/home/itov/protogen/anim/page1/sleep.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "smug": {
+            "filepath": "/home/itov/protogen/anim/page1/smug.gif",
+            "filehash": "295f9bc27a70064c82be690155d38af1",
+            "streamfile": "/home/itov/protogen/anim/page1/smug.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "sorry": {
+            "filepath": "/home/itov/protogen/anim/page1/sorry.gif",
+            "filehash": "200878bed9ce913b097fdf56a669ef86",
+            "streamfile": "/home/itov/protogen/anim/page1/sorry.proot",
+            "fps": 65,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "uwu1": {
+            "filepath": "/home/itov/protogen/anim/page1/uwu1.gif",
+            "filehash": "11f81db11a578c49acc1c34d74b06f8b",
+            "streamfile": "/home/itov/protogen/anim/page1/uwu1.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "uwu2": {
+            "filepath": "/home/itov/protogen/anim/page1/uwu2.gif",
+            "filehash": "23673a122027ae3cac27942f03b51749",
+            "streamfile": "/home/itov/protogen/anim/page1/uwu2.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "vapor": {
+            "filepath": "/home/itov/protogen/anim/page1/vapor.gif",
+            "filehash": "5993f0cc2936401928a09633ab1ba41c",
+            "streamfile": "/home/itov/protogen/anim/page1/vapor.proot",
+            "fps": 3000,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "xeyes": {
+            "filepath": "/home/itov/protogen/anim/page1/xeyes.gif",
+            "filehash": "1644a3f0b5e58f6c96491ffbd8ec4ec3",
+            "streamfile": "/home/itov/protogen/anim/page1/xeyes.proot",
+            "fps": 60,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
+        },
+        "yes": {
+            "filepath": "/home/itov/protogen/anim/page1/yes.gif",
+            "filehash": "3eb98270d16aab18d482f507d483242f",
+            "streamfile": "/home/itov/protogen/anim/page1/yes.proot",
+            "fps": 75,
+            "converted": true,
+            "bindings": {
+                "audio": "",
+                "scripts": ""
+            }
         }
     }
 }

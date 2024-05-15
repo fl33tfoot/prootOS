@@ -1,3 +1,4 @@
+import json
 import os
 import subprocess
 import signal
@@ -22,25 +23,38 @@ base_cmd = " ".join([env.LIV_PATH,
                "--led-rows={}".format(env.MATRIX_ROWS),
                "--led-gpio-mapping={}".format(env.MATRIX_TYPE),
                "--led-chain={}".format(env.MATRIX_DAISY_CHAIN),
-               "--led-limit-refresh={}".format(env.MATRIX_REFRESH_RATE_LIMIT),
-               "-D{}".format(1000 // env.MATRIX_FPS)])
+               "--led-limit-refresh={}".format(env.MATRIX_REFRESH_RATE_LIMIT)
+           ])
 
 # play animations from streamfile
 def show(index, loops=0, time=0):
     global displaying, override, current_anim
 
+    if env.archetype == "basic":
+        # if the folder or animation file at the index doesnt exist, skip it
+        if (anims.get(str(index[0])) is None) or (anims[str(index[0])].get(basic_page[index[1]]) is None):
+            log("Animation at {} doesn't exist! Skipping...".format(index))
+            return True
 
-    if (anims.get(str(index[0])) is None) or (anims[str(index[0])].get(basic_page[index[1]]) is None):
-        log("Animation at {} doesn't exist! Skipping...".format(index))
-        return True
+        # otherwise the new anim path is here
+        new_anim = anims[str(index[0])][basic_page[index[1]]]
 
-    new_anim = anims[str(index[0])][basic_page[index[1]]]
+    elif env.archetype == "advanced":
+        # this should never happen because the buttons on the gui are created
+        # dynamically upon every refresh, but just in case....
+        if not os.path.exists(index['streamfile']):
+            log("Animation at {} doesn't exist! Skipping...".format(index["streamfile"]), err_id=110)
+            return True
 
+        # here's the streamfile info, all nice and easy
+        new_anim = index
+
+    # if the animation is the same as the current one, do nothing
     if current_anim == new_anim:
         return True
 
     current_anim = new_anim
-    streamfile_path = current_anim.get('streamfile')
+    streamfile_path = current_anim.get('streamfile') if env.archetype == "basic" else index['streamfile']
 
     if not override:
 
@@ -48,10 +62,20 @@ def show(index, loops=0, time=0):
             if kill():
                 displaying = False
 
+        # set the animation base framerate
+        args = "-D{}".format((current_anim.get('fps') if env.archetype == "basic" else index['fps']))
+
         if (loops == 0) and (time == 0):
-            args = "--led-daemon"
+            args = args + " --led-daemon"
         else:
-            args = ("-l{} ".format(loops) if loops <= 0 else "") + ("-t{}".format(time if time <= 0 else ""))
+            if loops > 0:
+                args = args + "-l{} ".format(loops)
+
+            if time > 0:
+                args = args + "-t{}".format(time)
+#            args = ("-l{} ".format(loops) if loops <= 0 else "") + ("-t{}".format(time if time <= 0 else ""))
+
+        log(" ".join([base_cmd, args, streamfile_path]))
 
         try:
             if not displaying:
@@ -132,6 +156,9 @@ def show_menu():
 def show_boot():
 
     pass
+
+def get_status():
+    return [current_anim, override, displaying]
 
 def main():
     if not os.path.exists(env.RUNTIME_ANIMS_DIR):

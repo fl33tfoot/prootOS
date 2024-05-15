@@ -1,37 +1,44 @@
 {
     "preferences": {
-        "name": "itov",
+        "name": "r4sput1n",
         "comm": true,
         "uuid": 0,
         "default_fps": 10,
         "allow_destructive_repairs": false,
         "controller": "wired",
         "preferred_wireless_controller": "any",
-        "led_brightness": 100
+        "led_brightness": 100,
+        "color": 3
     },
     "system": {
         "os_version": "1.5.0",
-        "os_archetype": "basic",
+        "os_archetype": "advanced",
         "update_server": "api.southpawstudios.org",
         "update_port": 3260,
-        "wifi_ssid": "",
-        "wifi_pw": ""
+        "wifi_enabled": true,
+        "wifi_ssid": "SCP Foundation",
+        "wifi_pw": "largewater288",
+        "update_auth": "",
+        "debug_on": true
     },
     "basic": {
         "sensitivity": 0.1,
-        "volume": 10000
+        "volume": 7000
     },
     "advanced": {
-        "sensitivity": 0.1,
-        "volume": 10000,
+        "sensitivity": "0.1",
+        "volume": "7000",
         "rgb": false,
-        "audio": false
+        "audio": false,
+        "loop": true,
+        "scripts": false,
+        "startup_anim": "/home/itov/protogen/anim/page1/lua.proot"
     },
     "devices": {
         "pairing_failures": 0,
         "wiimote_a": "",
         "wiimote_b": "",
-        "joycon_a": "",
+        "joycon_a": "D4:F0:57:D3:7C:81",
         "joycon_b": "",
         "speaker_a": ""
     }

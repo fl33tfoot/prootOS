@@ -10,6 +10,10 @@ current_hashfile = None
 def convert(gif_dir, gif_name):
     base_gif = gif_dir + '/' + gif_name
 
+    if os.path.exists(base_gif + env.STREAMFILE_EXTENSION):
+        os.remove(base_gif + env.STREAMFILE_EXTENSION)
+
+
     lib_convert = subprocess.run([env.LIV_PATH,
                                   "--led-no-drop-privs",
                                   "--led-brightness={}".format(env.MATRIX_BRIGHTNESS),
@@ -24,8 +28,10 @@ def convert(gif_dir, gif_name):
                                   "-O{}".format(base_gif + env.STREAMFILE_EXTENSION)], capture_output=True)
 
     try:
+        # delete the bitch if it still exists
         if lib_convert.returncode != 0:
             raise Exception
+
     except Exception as e:
         log("Error while converting '{}': {}".format(gif_name, e), err_id=109)
         log("RAW STDOUT: {}".format(lib_convert.stdout.decode()), err_id=109)
@@ -69,7 +75,6 @@ def main():
     log("Converted {} files successfully".format(count))
     log("Writing changes to hashes.json...")
     return write_hashfile(converted)
-
 
 if __name__ == "__main__":
     main()

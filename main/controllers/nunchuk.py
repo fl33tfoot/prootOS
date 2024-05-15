@@ -1,12 +1,11 @@
 import time
 import board
 import adafruit_nunchuk
-import asyncio
+import keyboard
 
-import env
-import display
-from env import log
-from display import show, kill
+import main.env
+from main.env import log
+from main.display import show, kill
 
 # last index of animation fle
 last_page = 0
@@ -96,7 +95,6 @@ def main():
                     else:
                         anim = 0
 
-
                 if not last_anim == anim or not last_page == page:
                     last_anim = anim
                     last_page = page
@@ -114,5 +112,5 @@ def main():
             quit()
 
 if __name__ == "__main__":
-    main()
+#    main()
     print("Run this via __init__.py please :3")

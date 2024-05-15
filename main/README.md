@@ -35,3 +35,5 @@ LOG ERROR IDs
 108 = Error while removing previous file... possible false positive
 
 109 = Error converting animation to streamfile
+
+110 = Animation streamfile doesn't exist whilst using advanced (gui) archetype

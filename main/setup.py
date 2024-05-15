@@ -9,30 +9,36 @@ default_config = {
     "preferences": {
         "name": "unknown protogen",
         "comm": False,
-        "uuid": 0,
+        "uuid": "0",
         "default_fps": 10,
         "allow_destructive_repairs": False,
         "controller": "wired",
         "preferred_wireless_controller": "any",
-        "led_brightness": 100
+        "led_brightness": 100,
+        "color": 3
     },
     "system": {
+        "debug_on": False,
         "os_version": "1.5.0",
         "os_archetype": "basic",
         "update_server": "api.southpawstudios.org",
         "update_port": 3260,
+        "update_auth": "",
+        "wifi_enabled": True,
         "wifi_ssid": "",
         "wifi_pw": ""
     },
     "basic": {
         "sensitivity": 0.1,
-        "volume": 10000
     },
     "advanced": {
         "sensitivity": 0.1,
-        "volume": 10000,
+        "volume": 7000,
         "rgb": False,
-        "audio": False
+        "audio": False,
+        "loop": True,
+        "scripts": False,
+        "startup_anim": ""
     },
     "devices": {
         "pairing_failures": 0,
@@ -214,7 +220,7 @@ if __name__ == "__main__":
             overwrite_config()
             update_version()
 
-        confirm = input("Reset wireless controllers? (y/N): ").lower()
+        confirm = input("WARNING! Do you want to reset wireless controllers? (y/N): ").lower()
         if ("y" or "yes" or "confirm") in confirm:
             log("Received manual user confirmation for resetting wireless controller config")
             reset_bt_devices()
